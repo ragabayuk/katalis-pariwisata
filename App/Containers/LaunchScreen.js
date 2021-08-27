@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
+import {NavigationActions, StackActions} from 'react-navigation';
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount(){
+    this.props.navigation.navigate('HomeNavigation')
+  }
   render () {
     return (
       <View style={styles.mainContainer}>
